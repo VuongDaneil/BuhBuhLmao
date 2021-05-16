@@ -1,0 +1,16 @@
+D:\BuBuLmao\BuBuLmao\bin\Debug\BuBuLmao.exe.config
+D:\BuBuLmao\BuBuLmao\bin\Debug\BuBuLmao.exe
+D:\BuBuLmao\BuBuLmao\bin\Debug\BuBuLmao.pdb
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao.csprojAssemblyReference.cache
+D:\BuBuLmao\BuBuLmao\obj\Debug\MainWindow.g.cs
+D:\BuBuLmao\BuBuLmao\obj\Debug\App.g.cs
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao_MarkupCompile.cache
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao_MarkupCompile.lref
+D:\BuBuLmao\BuBuLmao\obj\Debug\MainWindow.baml
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao.g.resources
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao.Properties.Resources.resources
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao.csproj.GenerateResource.cache
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao.csproj.CoreCompileInputs.cache
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao.exe
+D:\BuBuLmao\BuBuLmao\obj\Debug\BuBuLmao.pdb
+D:\BuBuLmao\BuBuLmao\obj\Debug\myRS.baml
