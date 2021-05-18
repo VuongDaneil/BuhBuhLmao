@@ -8,6 +8,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/button/play.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/4.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/5.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/6.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/7.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/8.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("puzzle/rabbitpuzzle/9.png")]
 
 

@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize">
     <Window.Resources>
-        <ResourceDictionary Source="myRS.xaml"/>
+        <ResourceDictionary Source ="Resources/myRS.xaml"/>
     </Window.Resources>
     <Grid>
         <Grid.Background>
@@ -22,23 +22,8 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
-            <Grid.Resources>
-                
-                <!--Even chuot-->
-                
 
-                <!--<Style TargetType="Button">
-                    <Setter Property="Background" Value="White"/>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="White"/>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>-->
-            </Grid.Resources>
-            
-            
+
             <!--Play btn-->
             <Grid Grid.Row="0" >
                 <Button x:Name="Playbtn" Style="{StaticResource MyButtonStyle}" Click="Playbtn_Click">

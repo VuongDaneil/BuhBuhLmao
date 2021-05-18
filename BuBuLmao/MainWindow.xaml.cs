@@ -27,7 +27,8 @@ namespace BuBuLmao
 
         private void Playbtn_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("bruh");
+            PlayingWindow new1 = new PlayingWindow();
+            new1.Show();
         }
     }
 }
