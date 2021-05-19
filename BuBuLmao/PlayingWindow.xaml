@@ -5,6 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BuBuLmao"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        
         Title="PlayingWindow" Height="768" Width="1366"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize">
@@ -32,14 +39,25 @@
         </Style>
     </Window.Resources>
     <Grid>
-        
+        <Button 
+            BorderBrush="#FF686868" BorderThickness="5"
+            ToolTip="MaterialDesignFloatingActionLightButton" Margin="310,562,933,64.4" Click="Button_Click">
+            <materialDesign:PackIcon
+                Kind="ContentSave" Width="96" Height="96" />
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="100"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Margin="320,674,933,10.4" FontSize="40" FontWeight="Bold">SAVE</Label>
         <!--picture list-->
         <ListBox x:Name="itemsList" BorderThickness="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                  Width="auto" Height="auto"
                  PreviewMouseLeftButtonDown="itemList_PreviewMouseLeftButtonDown" DataContext="{Binding}" ItemsSource="{Binding}"
                  ItemTemplate="{StaticResource listPuzzle}"
                  Margin="663,117,528,118" Cursor="Hand" />
-        
+
         <!--Picture goal-->
         <Grid  Width="360" Height="360" Margin="187,188,811,189" >
 

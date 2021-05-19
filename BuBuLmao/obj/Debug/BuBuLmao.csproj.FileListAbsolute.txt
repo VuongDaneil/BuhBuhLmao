@@ -33,3 +33,12 @@ D:\BuhBuhLmao\BuBuLmao\obj\Debug\PlayingWindow.g.cs
 D:\BuhBuhLmao\BuBuLmao\obj\Debug\PlayingWindow.baml
 D:\BuhBuhLmao\BuBuLmao\obj\Debug\App.baml
 D:\BuhBuhLmao\BuBuLmao\obj\Debug\Resources\myRS.baml
+D:\BuhBuhLmao\BuBuLmao\obj\Debug\Resources\MyResource.baml
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\MaterialDesignColors.dll
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\MaterialDesignColors.pdb
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\BuhBuhLmao\BuBuLmao\obj\Debug\BuBuLmao.csproj.CopyComplete
+D:\BuhBuhLmao\BuBuLmao\obj\Debug\CreateLevel.g.cs
+D:\BuhBuhLmao\BuBuLmao\obj\Debug\CreateLevel.baml

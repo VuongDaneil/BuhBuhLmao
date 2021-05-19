@@ -47,5 +47,7 @@
                 </Button>
             </Grid>
         </Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="1153,438,0,0" VerticalAlignment="Top" Width="135" Height="130" Click="Button_Click"/>
+        
     </Grid>
 </Window>

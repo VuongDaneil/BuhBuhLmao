@@ -9,11 +9,13 @@ using System.Windows.Forms;
 namespace BuBuLmao.ViewModel
 {
     
-    class PlayingModel
+    public class PlayingModel
     {
-        
-
-
+        public static ListBox ls1;
+        //public MainViewModel()
+        //{
+        //    ls1.Items = PlayingWindow.lbxDragSource.ItemsSource;
+        //}
     }
 
     

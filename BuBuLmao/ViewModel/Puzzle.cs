@@ -67,7 +67,7 @@ namespace BuBuLmao.ViewModel
 
             foreach (PicturePiece item in placement)
             {
-                if ((placement.IndexOf(item) == item.index) && placement.IndexOf(item) ==8)
+                if ((placement.IndexOf(item) == item.index) && placement.IndexOf(item) == 8)
 
                     return true;
             }

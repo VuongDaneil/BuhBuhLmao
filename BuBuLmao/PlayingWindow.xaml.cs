@@ -28,8 +28,10 @@ namespace BuBuLmao
         ObservableCollection<PicturePiece> itemPlacement = new ObservableCollection<PicturePiece>();
         PicturePiece emptyItem = new PicturePiece();
 
-        ListBox lbxDragSource;
+        public static ListBox lbxDragSource;
         Canvas cvDragSource;
+        //ObservableCollection<> stulist = new ObservableCollection<string>();
+        ListBox savedlbx ;
 
 
         //Initialized khoi tao anh va vi tri
@@ -51,7 +53,8 @@ namespace BuBuLmao
                 itemPlacement[i].index = i;
             }
             //cho vao listbox xaml
-            itemsList.ItemsSource = puzzle.PicPiece;
+
+                itemsList.ItemsSource = puzzle.PicPiece;
 
             puzzle.Edited += new EventHandler(puzzle_Edited);
         }
@@ -127,8 +130,10 @@ namespace BuBuLmao
                 {
                     //updat
                     this.itemPlacement[indexToUpdate] = itemTransferred;
+                    
                     //delete item from listbox
                     ((IList)lbxDragSource.ItemsSource).Remove(itemTransferred);
+
                 }
                 else if (itemTransferred.DragFrom == typeof(Canvas))
                 {
@@ -140,10 +145,12 @@ namespace BuBuLmao
 
                     //delete item from listbox after drag
                     itemPlacement[previousIndex] = emptyItem;
+                    
                     //delete picture
                     Canvas associated = GetAssociatedCanvasByIndex(previousIndex);
                     associated.Children.Clear();
                     associated = null;
+
                 }
                 else
                 {
@@ -189,7 +196,9 @@ namespace BuBuLmao
                     buffer = itemPlacement[sourceIndex];
                     itemPlacement[sourceIndex] = itemPlacement[destinationIndex];
                     itemPlacement[destinationIndex] = buffer as PicturePiece;
+                    
                     buffer = null;
+
                 }
             }
 
@@ -283,6 +292,17 @@ namespace BuBuLmao
                 }
             }
             return null;
+        }
+        #endregion
+
+        #region Save game
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //savedlbx.ItemsSource = itemsList.ItemsSource;
+            ObservableCollection<PicturePiece> LbxSave = itemPlacement;
+            //lbxDragSource = savedlbx;
+
+            
         }
         #endregion
     }

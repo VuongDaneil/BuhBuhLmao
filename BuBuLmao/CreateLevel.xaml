@@ -1,0 +1,14 @@
+﻿<Window x:Class="BuBuLmao.CreateLevel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuBuLmao"
+        mc:Ignorable="d"
+        Title="CreateLevel" Height="450" Width="800">
+    <Grid>
+        <Image x:Name="newimg" Width="360" Height="360" Margin="121,29,312.6,31" Stretch="Fill"> </Image>
+        <Button Margin="586,141,119.6,229" FontSize="30" Click="Button_Click">LOAD</Button>
+        <Button FontSize="30" Margin="586,196,119.6,170" Click="Button_Click_1">CREATE</Button>
+    </Grid>
+</Window>
