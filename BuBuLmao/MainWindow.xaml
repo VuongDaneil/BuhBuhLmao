@@ -27,7 +27,7 @@
             <!--Play btn-->
             <Grid Grid.Row="0" >
                 <Button x:Name="Playbtn" Style="{StaticResource MyButtonStyle}" Click="Playbtn_Click">
-                    <Image Source="/Asset/Button/play.png" Height="121" Width="172"
+                    <Image Source="/Asset/Button/play.png" Height="132" Width="172"
                            Style="{StaticResource btnImage}"/>
                 </Button>
             </Grid>
