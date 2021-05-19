@@ -37,6 +37,7 @@ namespace BuBuLmao
         {
             InitializeComponent();
 
+            //choose level
             puzzle.Initialize(1);
 
             emptyItem.index = -1;
@@ -77,6 +78,8 @@ namespace BuBuLmao
         }
 
         //keo 1 manh hinh anh trong canvas
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PzItmCvs_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Canvas parent = sender as Canvas;
@@ -205,7 +208,7 @@ namespace BuBuLmao
 
             if (validate)
             {
-                MessageBox.Show("YOU WIN BRUHHH!");
+                MessageBox.Show("YOU WIN BRUHHH! HAHAHA GOOD JOB BRUH!");
             }
         }
         #endregion
@@ -250,6 +253,9 @@ namespace BuBuLmao
             return item;
         }
 
+        /// <param name="dragSource"></param>
+        /// <param name="point"></param>
+        /// <returns></returns>
         private object GetObjectDataFromPoint(ListBox dragSource, Point point)
         {
             UIElement element = dragSource.InputHitTest(point) as UIElement;
