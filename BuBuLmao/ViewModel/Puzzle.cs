@@ -60,18 +60,19 @@ namespace BuBuLmao.ViewModel
             }
         }
 
-        //cach tinh 
+        //check 
         public bool Validate(ObservableCollection<PicturePiece> itemPlacement)
         {
             ObservableCollection<PicturePiece> placement = itemPlacement;
 
-            foreach(PicturePiece item in itemPlacement)
+            foreach (PicturePiece item in placement)
             {
-                if ((itemPlacement.IndexOf(item) != item.index) || itemPlacement.IndexOf(item) < 0)
-                    return false;
+                if ((placement.IndexOf(item) == item.index) && placement.IndexOf(item) ==8)
+
+                    return true;
             }
 
-            return true;
+            return false;
         }
     }
 }
