@@ -31,7 +31,6 @@ namespace BuBuLmao
         public static ListBox lbxDragSource;
         Canvas cvDragSource;
         //ObservableCollection<> stulist = new ObservableCollection<string>();
-        ListBox savedlbx ;
 
 
         //Initialized khoi tao anh va vi tri
