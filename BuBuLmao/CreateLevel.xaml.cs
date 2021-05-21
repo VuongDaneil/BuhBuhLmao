@@ -103,23 +103,65 @@ namespace BuBuLmao
                 }
             } */
 
-            
+
+
+
+            /*
             BitmapImage src = new BitmapImage();
             BitmapImage part = new BitmapImage();
-            /*src.BeginInit();
+            src.BeginInit();
             src.UriSource = myBitmap.UriSource;
             src.CacheOption = BitmapCacheOption.OnLoad;
             src.EndInit(); */
 
-            for (int i = 0; i < 6; i++)
+            // piece 1-2-3
+            for (int i = 0; i < 3; i++) //x
             {
-                for (int j = 0; j < 6; j++)
+                for (int j = 0; j <1; j++) //y
                 {
 
-                    CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(j * 120, i * 120, 120, 120));
+                    CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(i * 100, j * 100, 100, 100));
                     BitmapEncoder newCroped = new PngBitmapEncoder();
                     newCroped.Frames.Add(BitmapFrame.Create(cp1));
-                    using (var fileStream = new System.IO.FileStream(NewFolderPath + "\\part" + i + ".png", System.IO.FileMode.Create))
+                    //index for one piece
+                    int indx = i + 1;
+                    using (var fileStream = new System.IO.FileStream(NewFolderPath + "\\" + indx + ".png", System.IO.FileMode.Create))
+                    {
+                        newCroped.Save(fileStream);
+                    }
+                }
+            }
+
+            // piece 4-5-6
+            for (int i = 0; i < 3; i++) //x
+            {
+                for (int j = 1; j < 2; j++) //y
+                {
+
+                    CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(i * 100, j * 100, 100, 100));
+                    BitmapEncoder newCroped = new PngBitmapEncoder();
+                    newCroped.Frames.Add(BitmapFrame.Create(cp1));
+                    //index for one piece
+                    int indx = i + 4;
+                    using (var fileStream = new System.IO.FileStream(NewFolderPath + "\\" + indx + ".png", System.IO.FileMode.Create))
+                    {
+                        newCroped.Save(fileStream);
+                    }
+                }
+            }
+
+            // piece 7-8-9
+            for (int i = 0; i < 3; i++) //x
+            {
+                for (int j = 2; j < 3; j++) //y
+                {
+
+                    CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(i * 100, j * 100, 100, 100));
+                    BitmapEncoder newCroped = new PngBitmapEncoder();
+                    newCroped.Frames.Add(BitmapFrame.Create(cp1));
+                    //index for one piece
+                    int indx = i + 7;
+                    using (var fileStream = new System.IO.FileStream(NewFolderPath + "\\" + indx + ".png", System.IO.FileMode.Create))
                     {
                         newCroped.Save(fileStream);
                     }
