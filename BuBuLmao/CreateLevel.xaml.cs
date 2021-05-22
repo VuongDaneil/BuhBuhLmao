@@ -69,8 +69,8 @@ namespace BuBuLmao
             BitmapImage myBitmap = new BitmapImage();
             myBitmap.BeginInit();
             myBitmap.UriSource = newuri;
-            myBitmap.DecodePixelWidth = 360;
-            myBitmap.DecodePixelHeight = 360;
+            myBitmap.DecodePixelWidth = 300;
+            myBitmap.DecodePixelHeight = 300;
             myBitmap.EndInit();
 
             BitmapEncoder encoder = new PngBitmapEncoder();

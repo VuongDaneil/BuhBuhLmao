@@ -28,7 +28,7 @@ namespace BuBuLmao
         ObservableCollection<PicturePiece> itemPlacement = new ObservableCollection<PicturePiece>();
         PicturePiece emptyItem = new PicturePiece();
 
-        public static ListBox lbxDragSource;
+        ListBox lbxDragSource;
         Canvas cvDragSource;
         //ObservableCollection<> stulist = new ObservableCollection<string>();
 
@@ -38,7 +38,7 @@ namespace BuBuLmao
         {
             InitializeComponent();
 
-            //choose level
+            //chosen level
             puzzle.Initialize(1);
 
             emptyItem.index = -1;
@@ -53,7 +53,7 @@ namespace BuBuLmao
             }
             //cho vao listbox xaml
 
-                itemsList.ItemsSource = puzzle.PicPiece;
+            itemsList.ItemsSource = puzzle.PicPiece;
 
             puzzle.Edited += new EventHandler(puzzle_Edited);
         }
@@ -119,7 +119,7 @@ namespace BuBuLmao
             //if empty canvas
             if(destination.Children.Count == 0)
             {
-                //put item in
+                //put item in canvas
                 destination.Children.Add(imageControl);
 
                 //Update PuzzleItemPlacement
@@ -136,16 +136,16 @@ namespace BuBuLmao
                 }
                 else if (itemTransferred.DragFrom == typeof(Canvas))
                 {
-                    //keo item tuw canvas khac
+                    //keo item tuw canvas khac(dk)
                     //udate vi tri manh duoc keo
                     int previousIndex = itemPlacement.IndexOf(itemTransferred);
 
                     itemPlacement[indexToUpdate] = itemTransferred;
 
-                    //delete item from listbox after drag
+                    
                     itemPlacement[previousIndex] = emptyItem;
                     
-                    //delete picture
+                    //delete picture from listbox
                     Canvas associated = GetAssociatedCanvasByIndex(previousIndex);
                     associated.Children.Clear();
                     associated = null;
@@ -163,7 +163,10 @@ namespace BuBuLmao
             {
 
                 //canvas isnt empty and drag from listbox - stop draging do nothing
-                if (itemTransferred.DragFrom == typeof(ListBox)) return;
+                if (itemTransferred.DragFrom == typeof(ListBox))
+                {
+                    return;
+                }
 
                 //canvas isnt empty and drag from another canvas -> switch them
                 else if (itemTransferred.DragFrom == typeof(Canvas))
@@ -176,15 +179,16 @@ namespace BuBuLmao
 
                     object buffer = null;
 
-                    //swich
+                    //doi index
                     Image image0 = new Image() { Width = destination.Width, Height = destination.Height, Stretch = Stretch.Fill };
                     image0.Source = itemPlacement[sourceIndex].PuzzleImageSource;
 
                     Image image1 = new Image() { Width = destination.Width, Height = destination.Height, Stretch = Stretch.Fill };
                     image1.Source = itemPlacement[destinationIndex].PuzzleImageSource;
-                    //trao doi
+                    //trao doi vi tri 2 picture
                     GetAssociatedCanvasByIndex(sourceIndex).Children.Clear();
                     GetAssociatedCanvasByIndex(destinationIndex).Children.Clear();
+
                     GetAssociatedCanvasByIndex(sourceIndex).Children.Add(image1);
                     GetAssociatedCanvasByIndex(destinationIndex).Children.Add(image0);
 
@@ -195,7 +199,7 @@ namespace BuBuLmao
                     buffer = itemPlacement[sourceIndex];
                     itemPlacement[sourceIndex] = itemPlacement[destinationIndex];
                     itemPlacement[destinationIndex] = buffer as PicturePiece;
-                    
+
                     buffer = null;
 
                 }
