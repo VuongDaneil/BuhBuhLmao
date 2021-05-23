@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BuBuLmao.LevelView;
 
 namespace BuBuLmao.ViewModel
 {
@@ -37,31 +38,99 @@ namespace BuBuLmao.ViewModel
         public void Initialize(int chosen)
         {
             string directorySource = "";
+            int numberOfpiece = 0;
 
+            //Beginer
             if (chosen == 1)
             {
-                this.name = "Rabbit Puzzle";
+                numberOfpiece = 9;
+
+                this.name = "RabbitPuzzle";
 
                 directorySource = "RabbitPuzzle";
+
+                for (int i = 0; i < 9; i++)
+                {
+                    this.PicPiece.Add(new PicturePiece());
+
+                    this.PicPiece[i].index = i;
+
+                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+
+                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                }
             }
 
-            for (int i = 0; i < 9; i++)
+            //Advance
+            if (chosen == 2)
             {
-                this.PicPiece.Add(new PicturePiece());
+                numberOfpiece = 16;
 
-                this.PicPiece[i].index = i;
+                this.name = "KristenStewart";
 
-                this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+                directorySource = "KristenStewart";
 
-                this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                for (int i = 0; i < 16; i++)
+                {
+                    this.PicPiece.Add(new PicturePiece());
+
+                    this.PicPiece[i].index = i;
+
+                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+
+                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                }
+            }
+
+            //Expert
+            if (chosen == 3)
+            {
+                numberOfpiece = 25;
+
+                this.name = "WildestDream";
+
+                directorySource = "WildestDream";
+
+                for (int i = 0; i < 25; i++)
+                {
+                    this.PicPiece.Add(new PicturePiece());
+
+                    this.PicPiece[i].index = i;
+
+                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+
+                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                }
+            }
+
+            //Custom
+            if (chosen == 4)
+            {
+                numberOfpiece = 9;
+
+                this.name = CreateLevel.level;
+
+                directorySource = CreateLevel.level;
+
+
+                for (int i = 0; i < 9; i++)
+                {
+                    this.PicPiece.Add(new PicturePiece());
+
+                    this.PicPiece[i].index = i;
+
+                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+
+                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                }
             }
 
             //tron random
             Random rand = new Random();
 
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < numberOfpiece; i++)
             {
-                int random = rand.Next(0, 8);
+                int random = rand.Next(0, numberOfpiece - 1);
 
                 PicturePiece buffer;
 

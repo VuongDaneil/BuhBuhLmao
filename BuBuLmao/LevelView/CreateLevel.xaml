@@ -1,0 +1,32 @@
+﻿<Window x:Class="BuBuLmao.LevelView.CreateLevel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuBuLmao"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Resources="{StaticResource MDesign}"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d"
+        Title="CreateLevel" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Image x:Name="newimg" Width="360" Height="360" Margin="121,29,312.6,31" Stretch="Fill"></Image>
+        <Button Margin="565,153,72.6,215" FontSize="30" Click="Button_Click" Height="Auto">LOAD</Button>
+        <Button FontSize="30" Margin="565,210,72.6,159" Click="Button_Click_1" Height="Auto">CREATE</Button>
+        <Button FontSize="30" Height="Auto" Margin="565,266,72.6,103" Background="#FF5700F1" Click="Button_Click_2">PLAY</Button>
+        <Grid Margin="515,69,41.6,272">
+            <TextBox x:Name="lvlname"
+                materialDesign:HintAssist.Hint="Level's name"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                VerticalAlignment="Center" />
+        </Grid>
+    </Grid>
+</Window>

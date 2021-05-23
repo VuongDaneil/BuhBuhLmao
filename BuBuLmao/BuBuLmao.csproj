@@ -37,6 +37,68 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Puzzle\KristenStewart\1.png" />
+    <Content Include="Puzzle\KristenStewart\10.png" />
+    <Content Include="Puzzle\KristenStewart\11.png" />
+    <Content Include="Puzzle\KristenStewart\12.png" />
+    <Content Include="Puzzle\KristenStewart\13.png" />
+    <Content Include="Puzzle\KristenStewart\14.png" />
+    <Content Include="Puzzle\KristenStewart\15.png" />
+    <Content Include="Puzzle\KristenStewart\16.png" />
+    <Content Include="Puzzle\KristenStewart\2.png" />
+    <Content Include="Puzzle\KristenStewart\3.png" />
+    <Content Include="Puzzle\KristenStewart\4.png" />
+    <Content Include="Puzzle\KristenStewart\5.png" />
+    <Content Include="Puzzle\KristenStewart\6.png" />
+    <Content Include="Puzzle\KristenStewart\7.png" />
+    <Content Include="Puzzle\KristenStewart\8.png" />
+    <Content Include="Puzzle\KristenStewart\9.png" />
+    <Content Include="Puzzle\KristenStewart\Goal.jpg" />
+    <Content Include="Puzzle\RabbitPuzzle\1.png" />
+    <Content Include="Puzzle\RabbitPuzzle\2.png" />
+    <Content Include="Puzzle\RabbitPuzzle\3.png" />
+    <Content Include="Puzzle\RabbitPuzzle\4.png" />
+    <Content Include="Puzzle\RabbitPuzzle\5.png" />
+    <Content Include="Puzzle\RabbitPuzzle\6.png" />
+    <Content Include="Puzzle\RabbitPuzzle\7.png" />
+    <Content Include="Puzzle\RabbitPuzzle\8.png" />
+    <Content Include="Puzzle\RabbitPuzzle\9.png" />
+    <Content Include="Puzzle\Style\1.png" />
+    <Content Include="Puzzle\Style\2.png" />
+    <Content Include="Puzzle\Style\3.png" />
+    <Content Include="Puzzle\Style\4.png" />
+    <Content Include="Puzzle\Style\5.png" />
+    <Content Include="Puzzle\Style\6.png" />
+    <Content Include="Puzzle\Style\7.png" />
+    <Content Include="Puzzle\Style\8.png" />
+    <Content Include="Puzzle\Style\9.png" />
+    <Content Include="Puzzle\Style\Goal.png" />
+    <Content Include="Puzzle\WildestDream\1.png" />
+    <Content Include="Puzzle\WildestDream\10.png" />
+    <Content Include="Puzzle\WildestDream\11.png" />
+    <Content Include="Puzzle\WildestDream\12.png" />
+    <Content Include="Puzzle\WildestDream\13.png" />
+    <Content Include="Puzzle\WildestDream\14.png" />
+    <Content Include="Puzzle\WildestDream\15.png" />
+    <Content Include="Puzzle\WildestDream\16.png" />
+    <Content Include="Puzzle\WildestDream\17.png" />
+    <Content Include="Puzzle\WildestDream\18.png" />
+    <Content Include="Puzzle\WildestDream\19.png" />
+    <Content Include="Puzzle\WildestDream\2.png" />
+    <Content Include="Puzzle\WildestDream\20.png" />
+    <Content Include="Puzzle\WildestDream\21.png" />
+    <Content Include="Puzzle\WildestDream\22.png" />
+    <Content Include="Puzzle\WildestDream\23.png" />
+    <Content Include="Puzzle\WildestDream\24.png" />
+    <Content Include="Puzzle\WildestDream\25.png" />
+    <Content Include="Puzzle\WildestDream\3.png" />
+    <Content Include="Puzzle\WildestDream\4.png" />
+    <Content Include="Puzzle\WildestDream\5.png" />
+    <Content Include="Puzzle\WildestDream\6.png" />
+    <Content Include="Puzzle\WildestDream\7.png" />
+    <Content Include="Puzzle\WildestDream\8.png" />
+    <Content Include="Puzzle\WildestDream\9.png" />
+    <Content Include="Puzzle\WildestDream\Goal.jpg" />
     <Reference Include="MaterialDesignColors, Version=2.0.0.2422, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.0.0\lib\net452\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -66,15 +128,43 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CreateLevel.xaml.cs">
+    <Compile Include="LevelView\AdvancePlaying.xaml.cs">
+      <DependentUpon>AdvancePlaying.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LevelView\CreateLevel.xaml.cs">
       <DependentUpon>CreateLevel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LevelView\CustomPlaying.xaml.cs">
+      <DependentUpon>CustomPlaying.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LevelView\DifficultiesWindow.xaml.cs">
+      <DependentUpon>DifficultiesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LevelView\ExpertPlaying.xaml.cs">
+      <DependentUpon>ExpertPlaying.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Puzzle.cs" />
-    <Page Include="CreateLevel.xaml">
+    <Page Include="LevelView\AdvancePlaying.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="LevelView\CreateLevel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LevelView\CustomPlaying.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LevelView\DifficultiesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LevelView\ExpertPlaying.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LevelView\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -82,7 +172,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="LevelView\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -90,13 +180,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PlayingWindow.xaml">
+    <Page Include="LevelView\PlayingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlayingWindow.xaml.cs">
+    <Compile Include="LevelView\PlayingWindow.xaml.cs">
       <DependentUpon>PlayingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\PicturePiece.cs" />
@@ -158,6 +248,61 @@
   <ItemGroup>
     <Resource Include="Asset\Button\Goodjob.png" />
     <Resource Include="Asset\Button\Youwin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Puzzle\KristenStewart\Goal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Puzzle\WildestDream\1.png" />
+    <Resource Include="Puzzle\WildestDream\10.png" />
+    <Resource Include="Puzzle\WildestDream\11.png" />
+    <Resource Include="Puzzle\WildestDream\12.png" />
+    <Resource Include="Puzzle\WildestDream\13.png" />
+    <Resource Include="Puzzle\WildestDream\14.png" />
+    <Resource Include="Puzzle\WildestDream\15.png" />
+    <Resource Include="Puzzle\WildestDream\16.png" />
+    <Resource Include="Puzzle\WildestDream\17.png" />
+    <Resource Include="Puzzle\WildestDream\18.png" />
+    <Resource Include="Puzzle\WildestDream\19.png" />
+    <Resource Include="Puzzle\WildestDream\2.png" />
+    <Resource Include="Puzzle\WildestDream\20.png" />
+    <Resource Include="Puzzle\WildestDream\21.png" />
+    <Resource Include="Puzzle\WildestDream\22.png" />
+    <Resource Include="Puzzle\WildestDream\23.png" />
+    <Resource Include="Puzzle\WildestDream\24.png" />
+    <Resource Include="Puzzle\WildestDream\25.png" />
+    <Resource Include="Puzzle\WildestDream\3.png" />
+    <Resource Include="Puzzle\WildestDream\4.png" />
+    <Resource Include="Puzzle\WildestDream\5.png" />
+    <Resource Include="Puzzle\WildestDream\6.png" />
+    <Resource Include="Puzzle\WildestDream\7.png" />
+    <Resource Include="Puzzle\WildestDream\8.png" />
+    <Resource Include="Puzzle\WildestDream\9.png" />
+    <Resource Include="Puzzle\WildestDream\Goal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Asset\Background\DifficultyWindow.PNG" />
+    <Resource Include="Asset\Background\EasyWindow.PNG" />
+    <Resource Include="Asset\Background\HardWindow.PNG" />
+    <Resource Include="Asset\Background\MediumWindow.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Puzzle\KristenStewart\1.png" />
+    <Resource Include="Puzzle\KristenStewart\10.png" />
+    <Resource Include="Puzzle\KristenStewart\11.png" />
+    <Resource Include="Puzzle\KristenStewart\12.png" />
+    <Resource Include="Puzzle\KristenStewart\13.png" />
+    <Resource Include="Puzzle\KristenStewart\14.png" />
+    <Resource Include="Puzzle\KristenStewart\15.png" />
+    <Resource Include="Puzzle\KristenStewart\16.png" />
+    <Resource Include="Puzzle\KristenStewart\2.png" />
+    <Resource Include="Puzzle\KristenStewart\3.png" />
+    <Resource Include="Puzzle\KristenStewart\4.png" />
+    <Resource Include="Puzzle\KristenStewart\5.png" />
+    <Resource Include="Puzzle\KristenStewart\6.png" />
+    <Resource Include="Puzzle\KristenStewart\7.png" />
+    <Resource Include="Puzzle\KristenStewart\8.png" />
+    <Resource Include="Puzzle\KristenStewart\9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />

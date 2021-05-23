@@ -1,0 +1,52 @@
+﻿<Window x:Class="BuBuLmao.LevelView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuBuLmao"
+        mc:Ignorable="d"
+        Title="BuBu LMAO!!" Height="768" Width="1366"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize">
+    <Window.Resources>
+        <ResourceDictionary Source ="../Resources/myRS.xaml"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Asset/Background/MenuBG.jpg"/>
+        </Grid.Background>
+        
+        <Grid Margin="122,280,733,31.4">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <!--Play btn-->
+            <Grid Grid.Row="0" >
+                <Button x:Name="Playbtn" Style="{StaticResource MyButtonStyle}" Click="Playbtn_Click">
+                    <Image Source="/Asset/Button/play.png" Height="132" Width="172"
+                           Style="{StaticResource btnImage}"/>
+                </Button>
+            </Grid>
+            
+            <!--Setting btn-->
+            <Grid Grid.Row="1">
+                <Button x:Name="Settingbtn" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Asset/Button/Setting.png" Height="121" Width="172"
+                           Style="{StaticResource btnImage}"/>
+                </Button>
+            </Grid>
+            <!--Quit btn-->
+            <Grid Grid.Row="2">
+                <Button x:Name="Quitbtn" Style="{StaticResource MyButtonStyle}">
+                    <Image Source="/Asset/Button/quit.png" Height="121" Width="172"
+                           Style="{StaticResource btnImage}"/>
+                </Button>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</Window>

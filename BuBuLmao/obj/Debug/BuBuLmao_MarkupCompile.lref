@@ -1,6 +1,10 @@
 ﻿
 FD:\BuhBuhLmao\BuBuLmao\App.xaml;;
-FD:\BuhBuhLmao\BuBuLmao\MainWindow.xaml;;
-FD:\BuhBuhLmao\BuBuLmao\PlayingWindow.xaml;;
-FD:\BuhBuhLmao\BuBuLmao\CreateLevel.xaml;;
+FD:\BuhBuhLmao\BuBuLmao\LevelView\AdvancePlaying.xaml;;
+FD:\BuhBuhLmao\BuBuLmao\LevelView\CreateLevel.xaml;;
+FD:\BuhBuhLmao\BuBuLmao\LevelView\DifficultiesWindow.xaml;;
+FD:\BuhBuhLmao\BuBuLmao\LevelView\ExpertPlaying.xaml;;
+FD:\BuhBuhLmao\BuBuLmao\LevelView\MainWindow.xaml;;
+FD:\BuhBuhLmao\BuBuLmao\LevelView\PlayingWindow.xaml;;
+FD:\BuhBuhLmao\BuBuLmao\LevelView\CustomPlaying.xaml;;
 
