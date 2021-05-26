@@ -220,7 +220,8 @@ namespace BuBuLmao.LevelView
 
             if (validate)
             {
-                MessageBox.Show("YOU WIN BRUHHH! HAHAHA GOOD JOB BRUH!");
+                CongratulationsWindow WIN = new CongratulationsWindow();
+                WIN.Show();
             }
         }
         #endregion

@@ -49,4 +49,5 @@ D:\BuhBuhLmao\BuBuLmao\obj\Debug\LevelView\MainWindow.g.cs
 D:\BuhBuhLmao\BuBuLmao\obj\Debug\LevelView\MainWindow.baml
 D:\BuhBuhLmao\BuBuLmao\obj\Debug\LevelView\CustomPlaying.g.cs
 D:\BuhBuhLmao\BuBuLmao\obj\Debug\LevelView\CustomPlaying.baml
-D:\BuhBuhLmao\BuBuLmao\obj\Debug\BuBuLmao_Content.g.cs
+D:\BuhBuhLmao\BuBuLmao\obj\Debug\LevelView\CongratulationsWindow.g.cs
+D:\BuhBuhLmao\BuBuLmao\obj\Debug\LevelView\CongratulationsWindow.baml

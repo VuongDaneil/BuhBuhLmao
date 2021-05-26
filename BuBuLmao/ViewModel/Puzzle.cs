@@ -45,9 +45,9 @@ namespace BuBuLmao.ViewModel
             {
                 numberOfpiece = 9;
 
-                this.name = "RabbitPuzzle";
+                this.name = "Style";
 
-                directorySource = "RabbitPuzzle";
+                directorySource = "Style";
 
                 for (int i = 0; i < 9; i++)
                 {

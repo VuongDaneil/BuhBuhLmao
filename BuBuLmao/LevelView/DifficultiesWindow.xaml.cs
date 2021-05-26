@@ -19,6 +19,7 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class DifficultiesWindow : Window
     {
+        public static int id = 0;
         public DifficultiesWindow()
         {
             InitializeComponent();
@@ -26,18 +27,21 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            id = 1;
             PlayingWindow new1 = new PlayingWindow();
             new1.Show();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            id = 2;
             AdvancePlaying new1 = new AdvancePlaying();
             new1.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            id = 3;
             ExpertPlaying new1 = new ExpertPlaying();
             new1.Show();
         }

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\BuhBuhLmao\BuBuLmao\App.xaml
-8937165547
-621015023732
-13-169695949
+9979332029
+
+141289477355
 18-852256555
-LevelView\AdvancePlaying.xaml;LevelView\CreateLevel.xaml;LevelView\CustomPlaying.xaml;LevelView\DifficultiesWindow.xaml;LevelView\ExpertPlaying.xaml;LevelView\MainWindow.xaml;Resources\myRS.xaml;LevelView\PlayingWindow.xaml;
+LevelView\AdvancePlaying.xaml;LevelView\CongratulationsWindow.xaml;LevelView\CreateLevel.xaml;LevelView\CustomPlaying.xaml;LevelView\DifficultiesWindow.xaml;LevelView\ExpertPlaying.xaml;LevelView\MainWindow.xaml;Resources\myRS.xaml;LevelView\PlayingWindow.xaml;
 
 False
 
