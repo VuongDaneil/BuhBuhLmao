@@ -18,7 +18,7 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Asset/Background/CongratBackground.png"/>
+            <ImageBrush ImageSource="/Asset/Background/CongratBackground.png"/>
         </Grid.Background>
 
         <Image x:Name="GoalIMG" Width="360" Height="360" Margin="400,29,33.6,31" Stretch="Fill"></Image>

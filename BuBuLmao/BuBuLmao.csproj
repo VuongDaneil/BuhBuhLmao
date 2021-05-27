@@ -37,6 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Resource Include="Asset\Background\CongratBackground.PNG" />
     <Resource Include="Puzzle\KristenStewart\Goal.png" />
     <Resource Include="Puzzle\Style\1.png" />
     <Resource Include="Puzzle\Style\2.png" />
@@ -87,32 +88,6 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Resource Include="Puzzle\WildestDream\1.png" />
-    <Resource Include="Puzzle\WildestDream\10.png" />
-    <Resource Include="Puzzle\WildestDream\11.png" />
-    <Resource Include="Puzzle\WildestDream\12.png" />
-    <Resource Include="Puzzle\WildestDream\13.png" />
-    <Resource Include="Puzzle\WildestDream\14.png" />
-    <Resource Include="Puzzle\WildestDream\15.png" />
-    <Resource Include="Puzzle\WildestDream\16.png" />
-    <Resource Include="Puzzle\WildestDream\17.png" />
-    <Resource Include="Puzzle\WildestDream\18.png" />
-    <Resource Include="Puzzle\WildestDream\19.png" />
-    <Resource Include="Puzzle\WildestDream\2.png" />
-    <Resource Include="Puzzle\WildestDream\20.png" />
-    <Resource Include="Puzzle\WildestDream\21.png" />
-    <Resource Include="Puzzle\WildestDream\22.png" />
-    <Resource Include="Puzzle\WildestDream\23.png" />
-    <Resource Include="Puzzle\WildestDream\24.png" />
-    <Resource Include="Puzzle\WildestDream\25.png" />
-    <Resource Include="Puzzle\WildestDream\3.png" />
-    <Resource Include="Puzzle\WildestDream\4.png" />
-    <Resource Include="Puzzle\WildestDream\5.png" />
-    <Resource Include="Puzzle\WildestDream\6.png" />
-    <Resource Include="Puzzle\WildestDream\7.png" />
-    <Resource Include="Puzzle\WildestDream\8.png" />
-    <Resource Include="Puzzle\WildestDream\9.png" />
-    <Resource Include="Puzzle\WildestDream\Goal.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -268,9 +243,7 @@
     <Resource Include="Puzzle\WildestDream\7.png" />
     <Resource Include="Puzzle\WildestDream\8.png" />
     <Resource Include="Puzzle\WildestDream\9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Background\CongratBackground.PNG" />
+    <Resource Include="Puzzle\WildestDream\Goal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
