@@ -10,6 +10,6 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/audio/taylorinstrumental.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/audio/theme.mp3")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("levelview/taylorinstrumental.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("asset/audio/wow.mp3")]
 
 

@@ -24,6 +24,8 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class PlayingWindow : Window
     {
+        public static int score = 50000;
+
         Puzzle puzzle = new Puzzle();
         ObservableCollection<PicturePiece> itemPlacement = new ObservableCollection<PicturePiece>();
         PicturePiece emptyItem = new PicturePiece();
@@ -205,6 +207,10 @@ namespace BuBuLmao.LevelView
                 }
             }
 
+            //Score update after drop
+            score -= 500;
+            if (score < 0) score = 0;
+
             //check xem co hop le khong
             puzzle.OnEdit(EventArgs.Empty);
 
@@ -220,6 +226,7 @@ namespace BuBuLmao.LevelView
 
             if (validate)
             {
+                MessageBox.Show(score.ToString());
                 CongratulationsWindow WIN = new CongratulationsWindow();
                 WIN.Show();
             }

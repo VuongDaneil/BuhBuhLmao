@@ -6,13 +6,10 @@
         xmlns:local="clr-namespace:BuBuLmao"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Resources="{StaticResource MDesign}"
-     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
      TextOptions.TextFormattingMode="Ideal"
      TextOptions.TextRenderingMode="Auto"
-     Background="{DynamicResource MaterialDesignPaper}"
-     FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d"
         Title="YOU WIN!" Height="450" Width="800"
         WindowStartupLocation="CenterScreen">
@@ -22,6 +19,21 @@
         </Grid.Background>
 
         <Image x:Name="GoalIMG" Width="360" Height="360" Margin="400,29,33.6,31" Stretch="Fill"></Image>
-        
+
+        <Button
+            ToolTip="MaterialDesignFlatMidButton"
+            Content="OK" FontSize="20" 
+            Margin="12,297,678.6,74" Background="#FFFF9300" FontWeight="Bold" Height="Auto" Click="Button_Click" />
+
+
+        <Button
+            ToolTip="MaterialDesignFlatMidButton"
+            Content="SAVE" FontSize="20" 
+            Margin="134,297,556.6,74" Background="#FFFF9300" FontWeight="Bold" Height="Auto" Click="Button_Click_2" />
+
+        <!--Score-->
+        <TextBlock x:Name="ScoreBoard"
+            Text="points" FontSize="40" Margin="5,176,556.6,171" FontWeight="Bold" TextAlignment="Center" Foreground="#FFE50000" />
+
     </Grid>
 </Window>

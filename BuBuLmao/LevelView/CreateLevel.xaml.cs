@@ -37,6 +37,7 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //Open file (dinh dang anh)
             OpenFileDialog op = new OpenFileDialog();
             op.Title = "Select a picture";
             op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
@@ -47,6 +48,7 @@ namespace BuBuLmao.LevelView
             newuri = new Uri(op.FileName);
         }
 
+        //Cut image (tao level + folder)
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(lvlname.Text))
@@ -132,9 +134,7 @@ namespace BuBuLmao.LevelView
             // piece 1-2-3
             for (int i = 0; i < 3; i++) //x
             {
-                for (int j = 0; j <1; j++) //y
-                {
-
+                    int j = 0; //y
                     CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(i * 100, j * 100, 100, 100));
                     BitmapEncoder newCroped = new PngBitmapEncoder();
                     newCroped.Frames.Add(BitmapFrame.Create(cp1));
@@ -144,14 +144,12 @@ namespace BuBuLmao.LevelView
                     {
                         newCroped.Save(fileStream);
                     }
-                }
             }
 
             // piece 4-5-6
             for (int i = 0; i < 3; i++) //x
             {
-                for (int j = 1; j < 2; j++) //y
-                {
+                    int j = 1; //y
 
                     CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(i * 100, j * 100, 100, 100));
                     BitmapEncoder newCroped = new PngBitmapEncoder();
@@ -162,14 +160,12 @@ namespace BuBuLmao.LevelView
                     {
                         newCroped.Save(fileStream);
                     }
-                }
             }
 
             // piece 7-8-9
             for (int i = 0; i < 3; i++) //x
             {
-                for (int j = 2; j < 3; j++) //y
-                {
+                    int j = 2; //y
 
                     CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(i * 100, j * 100, 100, 100));
                     BitmapEncoder newCroped = new PngBitmapEncoder();
@@ -180,7 +176,6 @@ namespace BuBuLmao.LevelView
                     {
                         newCroped.Save(fileStream);
                     }
-                }
             }
         }
 

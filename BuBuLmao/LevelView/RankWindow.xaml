@@ -1,0 +1,21 @@
+﻿<Window x:Class="BuBuLmao.LevelView.RankWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuBuLmao"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Resources="{StaticResource MDesign}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        mc:Ignorable="d"
+        Title="RankWindow" Height="600" Width="450">
+    <Grid>
+        <materialDesign:Card Margin="55,71,55.2,70.4">
+            <ListView x:Name="Scoreboard">
+            </ListView>
+        </materialDesign:Card>
+    </Grid>
+</Window>

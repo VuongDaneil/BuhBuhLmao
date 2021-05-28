@@ -24,6 +24,8 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class ExpertPlaying : Window
     {
+        public static int score = 100000;
+
         Puzzle puzzle = new Puzzle();
         ObservableCollection<PicturePiece> itemPlacement = new ObservableCollection<PicturePiece>();
         PicturePiece emptyItem = new PicturePiece();
@@ -204,6 +206,10 @@ namespace BuBuLmao.LevelView
 
                 }
             }
+
+            //Update score
+            score -= 500;
+            if (score < 0) score = 0;
 
             //check xem co hop le khong
             puzzle.OnEdit(EventArgs.Empty);

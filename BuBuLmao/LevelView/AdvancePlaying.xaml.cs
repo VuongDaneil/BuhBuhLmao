@@ -23,6 +23,9 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class AdvancePlaying : Window
     {
+        //Score
+        public static int score = 75000;
+
         Puzzle puzzle = new Puzzle();
         ObservableCollection<PicturePiece> itemPlacement = new ObservableCollection<PicturePiece>();
         PicturePiece emptyItem = new PicturePiece();
@@ -203,6 +206,10 @@ namespace BuBuLmao.LevelView
 
                 }
             }
+
+            //update diem
+            score -= 500;
+            if (score < 0) score = 0;
 
             //check xem co hop le khong
             puzzle.OnEdit(EventArgs.Empty);
