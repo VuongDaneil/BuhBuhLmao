@@ -112,6 +112,9 @@
     <Compile Include="LevelView\ExpertPlaying.xaml.cs">
       <DependentUpon>ExpertPlaying.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LevelView\SettingWindow.xaml.cs">
+      <DependentUpon>SettingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Puzzle.cs" />
     <Page Include="LevelView\AdvancePlaying.xaml">
       <SubType>Designer</SubType>
@@ -149,6 +152,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="LevelView\SettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\myRS.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -244,6 +251,13 @@
     <Resource Include="Puzzle\WildestDream\8.png" />
     <Resource Include="Puzzle\WildestDream\9.png" />
     <Resource Include="Puzzle\WildestDream\Goal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset\Audio\Taylorinstrumental.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Asset\Audio\theme.mp3" />
+    <Content Include="LevelView\Taylorinstrumental.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />

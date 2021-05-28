@@ -34,14 +34,14 @@
             
             <!--Setting btn-->
             <Grid Grid.Row="1">
-                <Button x:Name="Settingbtn" Style="{StaticResource MyButtonStyle}">
+                <Button x:Name="Settingbtn" Style="{StaticResource MyButtonStyle}" Click="Settingbtn_Click">
                     <Image Source="/Asset/Button/Setting.png" Height="121" Width="172"
                            Style="{StaticResource btnImage}"/>
                 </Button>
             </Grid>
             <!--Quit btn-->
             <Grid Grid.Row="2">
-                <Button x:Name="Quitbtn" Style="{StaticResource MyButtonStyle}">
+                <Button x:Name="Quitbtn" Style="{StaticResource MyButtonStyle}" Click="Quitbtn_Click">
                     <Image Source="/Asset/Button/quit.png" Height="121" Width="172"
                            Style="{StaticResource btnImage}"/>
                 </Button>
