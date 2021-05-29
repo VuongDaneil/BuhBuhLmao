@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BuBuLmao"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Icon="..\Asset\icon.ico"
+        
         Resources="{StaticResource MDesign}"
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"

@@ -24,7 +24,11 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class CongratulationsWindow : Window
     {
+        //Sound effect
         public static MediaPlayer Woweffect = new MediaPlayer();
+
+        //Score
+        public static int score;
         public CongratulationsWindow()
         {
             string filepath = "";
@@ -40,18 +44,21 @@ namespace BuBuLmao.LevelView
             //Hien anh thanh qua
             if (DifficultiesWindow.id == 1)
             {
+                score = PlayingWindow.score;
                 ScoreBoard.Text = PlayingWindow.score.ToString() + " Pts";
                 filepath = "Style";
             }
 
             if (DifficultiesWindow.id == 2)
             {
+                score = AdvancePlaying.score;
                 filepath = "KristenStewart";
                 ScoreBoard.Text = AdvancePlaying.score.ToString() + " Pts";
             }
 
             if (DifficultiesWindow.id == 3)
             {
+                score = ExpertPlaying.score;
                 filepath = "WildestDream";
                 ScoreBoard.Text = ExpertPlaying.score.ToString() + " Pts";
             }

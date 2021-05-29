@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SQLite;
 
 namespace BuBuLmao.LevelView
 {
@@ -19,9 +20,32 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class SaveScore : Window
     {
+        public const string dbconn = "Data source = D:\\BuhBuhLmao\\BuBuLmao\\Resources\\Database\\Playerdata.db";
+
         public SaveScore()
         {
             InitializeComponent();
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Thiet lap ket noi database dung sqlite
+            SQLiteConnection conn = new SQLiteConnection(dbconn);
+            conn.Open();
+            SQLiteDataAdapter ad = new SQLiteDataAdapter();
+            SQLiteCommand cmd = new SQLiteCommand();
+
+            //Query
+            String query = "INSERT INTO ScoreRecord VALUES ('" + Playername.Text + "', '" + CongratulationsWindow.score + "')";
+            cmd.CommandText = query;
+            ad.SelectCommand = cmd;
+            cmd.Connection = conn;
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+
+            MessageBox.Show("Done!");
+            this.Close();
         }
     }
 }

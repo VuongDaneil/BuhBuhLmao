@@ -226,7 +226,6 @@ namespace BuBuLmao.LevelView
 
             if (validate)
             {
-                MessageBox.Show(score.ToString());
                 CongratulationsWindow WIN = new CongratulationsWindow();
                 WIN.Show();
             }
@@ -306,13 +305,15 @@ namespace BuBuLmao.LevelView
         }
         #endregion
 
-        #region Save game
+        #region Tutorial
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //savedlbx.ItemsSource = itemsList.ItemsSource;
-            ObservableCollection<PicturePiece> LbxSave = itemPlacement;
-            //lbxDragSource = savedlbx;
 
+            //lbxDragSource = savedlbx;
+            MessageBox.Show("TUTORIAL:" +
+                "\r\nJust drag image from the listview on the right to the cavas on the left!" +
+                "\r\nGood luck my boi!");
             
         }
         #endregion

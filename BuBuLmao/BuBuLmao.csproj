@@ -37,35 +37,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
-    <Resource Include="Asset\Background\CongratBackground.PNG" />
-    <Resource Include="Puzzle\KristenStewart\Goal.png" />
-    <Resource Include="Puzzle\Style\1.png" />
-    <Resource Include="Puzzle\Style\2.png" />
-    <Resource Include="Puzzle\Style\3.png" />
-    <Resource Include="Puzzle\Style\4.png" />
-    <Resource Include="Puzzle\Style\5.png" />
-    <Resource Include="Puzzle\Style\6.png" />
-    <Resource Include="Puzzle\Style\7.png" />
-    <Resource Include="Puzzle\Style\8.png" />
-    <Resource Include="Puzzle\Style\9.png" />
-    <Resource Include="Puzzle\Style\Goal.png" />
-    <Resource Include="Puzzle\KristenStewart\1.png" />
-    <Resource Include="Puzzle\KristenStewart\10.png" />
-    <Resource Include="Puzzle\KristenStewart\11.png" />
-    <Resource Include="Puzzle\KristenStewart\12.png" />
-    <Resource Include="Puzzle\KristenStewart\13.png" />
-    <Resource Include="Puzzle\KristenStewart\14.png" />
-    <Resource Include="Puzzle\KristenStewart\15.png" />
-    <Resource Include="Puzzle\KristenStewart\16.png" />
-    <Resource Include="Puzzle\KristenStewart\2.png" />
-    <Resource Include="Puzzle\KristenStewart\3.png" />
-    <Resource Include="Puzzle\KristenStewart\4.png" />
-    <Resource Include="Puzzle\KristenStewart\5.png" />
-    <Resource Include="Puzzle\KristenStewart\6.png" />
-    <Resource Include="Puzzle\KristenStewart\7.png" />
-    <Resource Include="Puzzle\KristenStewart\8.png" />
-    <Resource Include="Puzzle\KristenStewart\9.png" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -229,34 +204,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Asset\Button\quit.png" />
-    <Resource Include="Asset\Button\setting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Background\MenuBG.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Button\Play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Button\Advance.png" />
-    <Resource Include="Asset\Button\Beginer.png" />
-    <Resource Include="Asset\Button\Expert.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Button\CreateLvl.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Button\Goodjob.png" />
-    <Resource Include="Asset\Button\Youwin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Background\DifficultyWindow.PNG" />
-    <Resource Include="Asset\Background\EasyWindow.PNG" />
-    <Resource Include="Asset\Background\HardWindow.PNG" />
-    <Resource Include="Asset\Background\MediumWindow.PNG" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Asset\Audio\Taylorinstrumental.mp3" />
+    <Content Include="Asset\Audio\theme.mp3" />
+    <Content Include="Asset\Audio\Wow.mp3" />
+    <Resource Include="icon.ico" />
+    <Resource Include="Asset\icon.ico" />
+    <Resource Include="Puzzle\KristenStewart\1.png" />
+    <Resource Include="Puzzle\KristenStewart\10.png" />
+    <Resource Include="Puzzle\KristenStewart\11.png" />
+    <Resource Include="Puzzle\KristenStewart\12.png" />
+    <Resource Include="Puzzle\KristenStewart\13.png" />
+    <Resource Include="Puzzle\KristenStewart\14.png" />
+    <Resource Include="Puzzle\KristenStewart\15.png" />
+    <Resource Include="Puzzle\KristenStewart\16.png" />
+    <Resource Include="Puzzle\KristenStewart\2.png" />
+    <Resource Include="Puzzle\KristenStewart\3.png" />
+    <Resource Include="Puzzle\KristenStewart\4.png" />
+    <Resource Include="Puzzle\KristenStewart\5.png" />
+    <Resource Include="Puzzle\KristenStewart\6.png" />
+    <Resource Include="Puzzle\KristenStewart\7.png" />
+    <Resource Include="Puzzle\KristenStewart\8.png" />
+    <Resource Include="Puzzle\KristenStewart\9.png" />
+    <Resource Include="Puzzle\KristenStewart\Goal.png" />
     <Resource Include="Puzzle\WildestDream\1.png" />
     <Resource Include="Puzzle\WildestDream\10.png" />
     <Resource Include="Puzzle\WildestDream\11.png" />
@@ -283,17 +252,34 @@
     <Resource Include="Puzzle\WildestDream\8.png" />
     <Resource Include="Puzzle\WildestDream\9.png" />
     <Resource Include="Puzzle\WildestDream\Goal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Asset\Audio\Taylorinstrumental.mp3">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Asset\Audio\theme.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Asset\Audio\Wow.mp3" />
-    <Resource Include="Asset\Background\SaveBackground.PNG" />
+    <Resource Include="Puzzle\Style\1.png" />
+    <Resource Include="Puzzle\Style\2.png" />
+    <Resource Include="Puzzle\Style\3.png" />
+    <Resource Include="Puzzle\Style\4.png" />
+    <Resource Include="Puzzle\Style\5.png" />
+    <Resource Include="Puzzle\Style\6.png" />
+    <Resource Include="Puzzle\Style\7.png" />
+    <Resource Include="Puzzle\Style\8.png" />
+    <Resource Include="Puzzle\Style\9.png" />
+    <Resource Include="Puzzle\Style\Goal.png" />
+    <Resource Include="Asset\Button\Advance.png" />
+    <Resource Include="Asset\Button\Beginer.png" />
+    <Resource Include="Asset\Button\CreateLvl.png" />
+    <Resource Include="Asset\Button\Expert.png" />
+    <Resource Include="Asset\Button\Goodjob.png" />
+    <Resource Include="Asset\Button\Play.png" />
+    <Resource Include="Asset\Button\quit.png" />
     <Resource Include="Asset\Button\Rank.png" />
+    <Resource Include="Asset\Button\setting.png" />
+    <Resource Include="Asset\Button\Youwin.png" />
+    <Resource Include="Asset\Background\CongratBackground.PNG" />
+    <Resource Include="Asset\Background\DifficultyWindow.PNG" />
+    <Resource Include="Asset\Background\EasyWindow.PNG" />
+    <Resource Include="Asset\Background\HardWindow.PNG" />
+    <Resource Include="Asset\Background\MediumWindow.PNG" />
+    <Resource Include="Asset\Background\MenuBG.jpg" />
+    <Resource Include="Asset\Background\RankBackground.png" />
+    <Resource Include="Asset\Background\SaveBackground.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />

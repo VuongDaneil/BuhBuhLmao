@@ -318,5 +318,12 @@ namespace BuBuLmao.LevelView
             return null;
         }
         #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("TUTORIAL:" +
+                "\r\nJust drag image from the listview on the right to the cavas on the left!" +
+                "\r\nGood luck my boi!");
+        }
     }
 }

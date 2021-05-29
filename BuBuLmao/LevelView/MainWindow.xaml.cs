@@ -61,7 +61,8 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            RankWindow Highscore = new RankWindow();
+            Highscore.Show();
         }
     }
 }

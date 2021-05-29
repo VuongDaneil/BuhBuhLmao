@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BuBuLmao"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Icon="..\Asset\icon.ico"
+        
         Resources="{StaticResource MDesign}"
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
@@ -15,7 +17,7 @@
         Title="SaveScore" Height="300" Width="450">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="../Asset/Background/SaveBackground.png"/>
+            <ImageBrush ImageSource="../Asset/Background/SaveBackground.png" Opacity="0.1"/>
         </Grid.Background>
 
         <Grid Margin="44,38,46.2,53.4" Background="White">
@@ -24,17 +26,17 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" Margin="0,25,0,89.2">
-                <TextBox
-                    materialDesign:HintAssist.Hint="Your Name"
-                    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                    VerticalAlignment="Center" Height="51" Margin="54,0,53.8,-51" />
+                <TextBox x:Name="Playername"
+                materialDesign:HintAssist.Hint="Your name"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                VerticalAlignment="Center" Margin="46,15,46.8,-63" Height="48" />
             </Grid>
 
             <Grid Grid.Row="1" Margin="0,0.4,0,25.2">
                 <Button
                     ToolTip="MaterialDesignFlatMidButton"
                     Content="SAVE" FontSize="20"
-                    Background="#FFFF9300" FontWeight="Bold" Height="Auto" Margin="107,0,106.8,10" />
+                    Background="#FFFF9300" FontWeight="Bold" Height="Auto" Margin="107,10,106.8,10" Click="Button_Click" />
             </Grid>
 
         </Grid>
