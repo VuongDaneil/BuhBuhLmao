@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BuBuLmao"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Icon="..\Asset\icon.ico"
+        
         Resources="{StaticResource MDesign}"
      TextElement.FontWeight="Regular"
      TextElement.FontSize="13"
@@ -36,17 +38,25 @@
             </StackPanel>
         </materialDesign:ColorZone>
 
-        <ToggleButton
-                    Style="{StaticResource MaterialDesignActionToggleButton}"
-                    ToolTip="MaterialDesignActionLightToggleButton"
-                    Content="{materialDesign:PackIcon Kind=VolumeHigh}"
-                    materialDesign:ToggleButtonAssist.OnContent="{materialDesign:PackIcon Kind=VolumeOff}" Margin="243,18,159,-50" Background="Black" Checked="ToggleButton_Checked" />
         <Button
-            Style="{StaticResource MaterialDesignFloatingActionButton}"
-            ToolTip="MaterialDesignFloatingActionButton" Height="Auto" Margin="308,18,94,-50" Width="Auto" Background="Black" BorderBrush="Black" Click="Button_Click">
-            <materialDesign:PackIcon Kind="InformationVariant" Height="22" Width="22"/>
+            Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+            ToolTip="MaterialDesignFloatingActionLightButton" Margin="206,14,189.2,-54" Height="Auto" Width="Auto" Click="Button_Click_1">
+            <materialDesign:PackIcon
+                Kind="VolumeHigh" Height="28" Width="28" />
         </Button>
 
+        <Button
+            Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+            ToolTip="MaterialDesignFloatingActionLightButton" Margin="284,14,110.2,-54" Height="Auto" Width="Auto" Click="Button_Click_2">
+            <materialDesign:PackIcon
+                Kind="VolumeOff" Height="28" Width="28"/>
+        </Button>
         <TextBlock Margin="1,-55,-1,8" FontWeight="Bold" TextAlignment="Center" FontSize="40">SETTING</TextBlock>
+        <Button
+            Style="{StaticResource MaterialDesignFloatingActionLightButton}"
+            ToolTip="MaterialDesignFloatingActionLightButton" Margin="363,14,32.2,-54" Height="Auto" Width="Auto" Click="Button_Click_3">
+            <materialDesign:PackIcon
+                Kind="InformationVariant" Height="28" Width="28"/>
+        </Button>
     </Grid>
 </Window>

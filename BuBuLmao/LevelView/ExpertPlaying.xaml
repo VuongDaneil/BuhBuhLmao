@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:BuBuLmao"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Icon="..\Asset\icon.ico"
 
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -44,9 +45,9 @@
         </Grid.Background>
         <Button 
             BorderBrush="#FF686868" BorderThickness="5"
-            ToolTip="MaterialDesignFloatingActionLightButton" Margin="1233,616,10,10.4">
+            ToolTip="MaterialDesignFloatingActionLightButton" Margin="1233,616,10,10.4" Click="Button_Click">
             <materialDesign:PackIcon
-                Kind="ContentSave" Width="96" Height="96" />
+                Kind="Help" Width="96" Height="96" Foreground="#FFFF3C3C" />
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="100"/>

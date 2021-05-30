@@ -18,6 +18,7 @@ namespace BuBuLmao.ViewModel
 {
     class Puzzle
     {
+
         public ObservableCollection<PicturePiece> PicPiece = new ObservableCollection<PicturePiece>();
 
         public string name;

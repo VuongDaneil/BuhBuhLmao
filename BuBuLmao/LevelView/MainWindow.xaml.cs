@@ -29,8 +29,9 @@ namespace BuBuLmao.LevelView
         public MainWindow()
         {
             InitializeComponent();
-            backgroundMusic.Open( new Uri (@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\theme.mp3", UriKind.Relative));
-            backgroundMusic.Volume = 0.1;
+
+            backgroundMusic.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\theme.mp3", UriKind.Relative)); 
+            backgroundMusic.Volume = 1;
             backgroundMusic.Play();
             backgroundMusic.MediaEnded += new EventHandler(Media_Ended);
         }
@@ -56,6 +57,12 @@ namespace BuBuLmao.LevelView
         {
             SettingWindow Setting = new SettingWindow();
             Setting.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RankWindow Highscore = new RankWindow();
+            Highscore.Show();
         }
     }
 }

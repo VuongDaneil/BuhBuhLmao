@@ -24,14 +24,23 @@ namespace BuBuLmao.LevelView
             InitializeComponent();
         }
 
-        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+
+        //Resume music
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow.backgroundMusic.Play();
+        }
+
+        //Pause music
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             MainWindow.backgroundMusic.Pause();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        //My group
+        private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MainWindow.backgroundMusic.Play();
+            MessageBox.Show(" <- Bủ Bủ Lmao!! The puzzle game -> \r\n Đỗ Minh Vượng \r\n Nguyễn Trung Kiên \r\n Nguyễn Thị Thanh");
         }
     }
 }
