@@ -50,3 +50,7 @@ D:\BuhBuhLmao\BuBuLmao\obj\Release\BuBuLmao.csproj.CopyComplete
 D:\BuhBuhLmao\BuBuLmao\obj\Release\BuBuLmao.exe
 D:\BuhBuhLmao\BuBuLmao\obj\Release\BuBuLmao.pdb
 D:\BuhBuhLmao\BuBuLmao\obj\Release\BuBuLmao.csprojAssemblyReference.cache
+D:\BuhBuhLmao\BuBuLmao\bin\Release\Asset\Audio\bonk.mp3
+D:\BuhBuhLmao\BuBuLmao\bin\Release\Asset\Audio\Clapping.mp3
+D:\BuhBuhLmao\BuBuLmao\bin\Release\Asset\Audio\theme.mp3
+D:\BuhBuhLmao\BuBuLmao\bin\Release\Asset\Audio\Wow.mp3

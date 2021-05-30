@@ -21,9 +21,16 @@ namespace BuBuLmao.LevelView
     public partial class RankWindow : Window
     {
         public const string dbconn = "Data source = D:\\BuhBuhLmao\\BuBuLmao\\Resources\\Database\\Playerdata.db";
+
+        //clapping sound
+        public static MediaPlayer clapping = new MediaPlayer();
         public RankWindow()
         {
             InitializeComponent();
+
+            clapping.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\Clapping.mp3", UriKind.Relative));
+            clapping.Play();
+
 
             //Thiet lap ket noi database dung sqlite
             SQLiteConnection conn = new SQLiteConnection(dbconn);
@@ -38,7 +45,7 @@ namespace BuBuLmao.LevelView
             cmd.Connection = conn;
             SQLiteDataReader reader = cmd.ExecuteReader();
 
-            //Add data
+            //Add data to 2 listview 
             string record = "";
             while (reader.Read())
             {

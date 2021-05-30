@@ -25,6 +25,8 @@ namespace BuBuLmao.LevelView
     {
 
         public static MediaPlayer backgroundMusic = new MediaPlayer();
+        public static MediaPlayer bonk = new MediaPlayer();
+
         public static int id = 1;
         public MainWindow()
         {
@@ -34,35 +36,66 @@ namespace BuBuLmao.LevelView
             backgroundMusic.Volume = 1;
             backgroundMusic.Play();
             backgroundMusic.MediaEnded += new EventHandler(Media_Ended);
+
         }
+
+        //loop theme
         private void Media_Ended(object sender, EventArgs e)
         {
             backgroundMusic.Position = TimeSpan.Zero;
             backgroundMusic.Play();
         }
 
+
+
+        //play button
         private void Playbtn_Click(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             DifficultiesWindow Difficult = new DifficultiesWindow();
+            
             Difficult.Show();
             
         }
 
-        private void Quitbtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
 
+        //Setting button-
         private void Settingbtn_Click(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             SettingWindow Setting = new SettingWindow();
+
             Setting.Show();
         }
 
+        //Highscore button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             RankWindow Highscore = new RankWindow();
+
             Highscore.Show();
         }
+
+
+        //Quit button
+        private void Quitbtn_Click(object sender, RoutedEventArgs e)
+        {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
+            this.Close();
+        }
+
     }
 }

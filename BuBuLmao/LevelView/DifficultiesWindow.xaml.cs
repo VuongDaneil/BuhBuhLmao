@@ -19,6 +19,9 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class DifficultiesWindow : Window
     {
+        //bonk
+        public static MediaPlayer bonk = new MediaPlayer();
+
         public static int id = 0;
         public DifficultiesWindow()
         {
@@ -27,6 +30,10 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             id = 1;
             PlayingWindow new1 = new PlayingWindow();
             new1.Show();
@@ -34,6 +41,10 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             id = 2;
             AdvancePlaying new1 = new AdvancePlaying();
             new1.Show();
@@ -41,6 +52,10 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             id = 3;
             ExpertPlaying new1 = new ExpertPlaying();
             new1.Show();
@@ -48,6 +63,10 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             CreateLevel CreateNew = new CreateLevel();
             CreateNew.Show();
         }

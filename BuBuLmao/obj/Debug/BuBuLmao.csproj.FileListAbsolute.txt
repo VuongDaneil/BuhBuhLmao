@@ -66,3 +66,7 @@ D:\BuhBuhLmao\BuBuLmao\bin\Debug\EntityFramework.xml
 D:\BuhBuhLmao\BuBuLmao\bin\Debug\EntityFramework.SqlServer.xml
 D:\BuhBuhLmao\BuBuLmao\bin\Debug\System.Data.SQLite.xml
 D:\BuhBuhLmao\BuBuLmao\obj\Debug\BuBuLmao_Content.g.cs
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\Asset\Audio\bonk.mp3
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\Asset\Audio\theme.mp3
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\Asset\Audio\Wow.mp3
+D:\BuhBuhLmao\BuBuLmao\bin\Debug\Asset\Audio\Clapping.mp3
