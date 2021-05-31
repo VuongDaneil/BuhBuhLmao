@@ -27,6 +27,9 @@ namespace BuBuLmao.LevelView
         //Sound effect
         public static MediaPlayer Woweffect = new MediaPlayer();
 
+        //bonk effect
+        public static MediaPlayer bonk = new MediaPlayer();
+
         //Score
         public static int score;
         public CongratulationsWindow()
@@ -73,12 +76,21 @@ namespace BuBuLmao.LevelView
         //Close window and play music
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             MainWindow.backgroundMusic.Play();
             this.Close();
         }
 
+        //Save window
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             SaveScore SavingData = new SaveScore();
             SavingData.Show();
         }

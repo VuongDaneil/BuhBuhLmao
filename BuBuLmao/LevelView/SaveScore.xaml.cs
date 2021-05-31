@@ -20,6 +20,9 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class SaveScore : Window
     {
+        //bonk effect
+        public static MediaPlayer bonk = new MediaPlayer();
+
         public const string dbconn = "Data source = D:\\BuhBuhLmao\\BuBuLmao\\Resources\\Database\\Playerdata.db";
 
         public SaveScore()
@@ -30,6 +33,11 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
+
             //Thiet lap ket noi database dung sqlite
             SQLiteConnection conn = new SQLiteConnection(dbconn);
             conn.Open();

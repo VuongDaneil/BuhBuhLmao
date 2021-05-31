@@ -44,11 +44,27 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Asset/Background/EasyWindow.png"/>
         </Grid.Background>
+
+        <Grid x:Name="Eyes" Margin="975,176,111,453.4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0">
+                <Image Source="../Asset/Button/Laser.png" Margin="-100,-69,-148.2,-65.2"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Image Source="../Asset/Button/Laser.png" Margin="-18,-64,-230.2,-70.2"/>
+            </Grid>
+        </Grid>
+
         <Button 
             BorderBrush="#FF686868" BorderThickness="5"
             ToolTip="MaterialDesignFloatingActionLightButton" Margin="1243,626,0,0.4" Click="Button_Click">
             <materialDesign:PackIcon
-                Kind="ContentSave" Width="96" Height="96" />
+                Kind="Help" Width="96" Height="96" />
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="100"/>

@@ -24,6 +24,9 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class CreateLevel : Window
     {
+        //bonk
+        public static MediaPlayer bonk = new MediaPlayer();
+
         //Tao ten lv va ten folder
         public static String level;
 
@@ -37,6 +40,10 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             //Open file (dinh dang anh)
             OpenFileDialog op = new OpenFileDialog();
             op.Title = "Select a picture";
@@ -51,6 +58,10 @@ namespace BuBuLmao.LevelView
         //Cut image (tao level + folder)
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             if (String.IsNullOrEmpty(lvlname.Text))
             {
                 MessageBox.Show("Please input your level's name first!");
@@ -181,6 +192,10 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
+
             CustomPlaying customLevel = new CustomPlaying();
             customLevel.Show();
         }

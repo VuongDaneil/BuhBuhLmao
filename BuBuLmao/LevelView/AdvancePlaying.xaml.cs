@@ -16,6 +16,8 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Threading;
 using BuBuLmao.ViewModel;
+using System.ComponentModel;
+
 namespace BuBuLmao.LevelView
 {
     /// <summary>
@@ -23,6 +25,12 @@ namespace BuBuLmao.LevelView
     /// </summary>
     public partial class AdvancePlaying : Window
     {
+        //bonk effect
+        public static MediaPlayer bonk = new MediaPlayer();
+
+        //Playing theme
+        public static MediaPlayer playTheme = new MediaPlayer();
+
         //Score
         public static int score = 75000;
 
@@ -39,6 +47,12 @@ namespace BuBuLmao.LevelView
         public AdvancePlaying()
         {
             InitializeComponent();
+
+            //Pause the main theme and play the state theme
+            MainWindow.backgroundMusic.Pause();
+            playTheme.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\WiiMusic.mp3", UriKind.Relative));
+            playTheme.Volume = 1;
+            playTheme.Play();
 
             //chosen level
             puzzle.Initialize(2);
@@ -58,7 +72,28 @@ namespace BuBuLmao.LevelView
             itemsList.ItemsSource = puzzle.PicPiece;
 
             puzzle.Edited += new EventHandler(puzzle_Edited);
+
+            //Close window: music stop & background music resume
+            this.Closing += new CancelEventHandler(MainWindow_Closing);
+
+            Eyes.Opacity = 0;
         }
+
+        #region music methods
+        //Music after closing whis window
+        void MainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            playTheme.Stop();
+            MainWindow.backgroundMusic.Play();
+        }
+
+        //loop theme
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            playTheme.Position = TimeSpan.Zero;
+            playTheme.Play();
+        }
+        #endregion
 
 
         #region thao tac chon & keo 
@@ -226,6 +261,9 @@ namespace BuBuLmao.LevelView
 
             if (validate)
             {
+                playTheme.Pause();
+                Eyes.Opacity = 1;
+
                 CongratulationsWindow WIN = new CongratulationsWindow();
                 WIN.Show();
             }
@@ -321,6 +359,10 @@ namespace BuBuLmao.LevelView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+            bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
+            bonk.Volume = 1;
+            bonk.Play();
             MessageBox.Show("TUTORIAL:" +
                 "\r\nJust drag image from the listview on the right to the cavas on the left!" +
                 "\r\nGood luck my boi!");
