@@ -10,7 +10,7 @@
         
         Title="BuBu LMAO!!" Height="768" Width="1366"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanResize">
+        ResizeMode="NoResize">
     <Window.Resources>
         <ResourceDictionary Source ="../Resources/myRS.xaml"/>
     </Window.Resources>

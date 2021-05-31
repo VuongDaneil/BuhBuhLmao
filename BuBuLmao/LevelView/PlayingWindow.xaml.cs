@@ -70,7 +70,7 @@ namespace BuBuLmao.LevelView
             }
             //cho vao listbox xaml
 
-            itemsList.ItemsSource = puzzle.PicPiece;
+            itemsList.ItemsSource = puzzle.PicPieces;
 
             puzzle.Edited += new EventHandler(puzzle_Edited);
 

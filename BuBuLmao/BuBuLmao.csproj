@@ -113,6 +113,7 @@
     <Compile Include="LevelView\SettingWindow.xaml.cs">
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\CustomPuzzle.cs" />
     <Compile Include="ViewModel\Puzzle.cs" />
     <Page Include="LevelView\AdvancePlaying.xaml">
       <SubType>Designer</SubType>

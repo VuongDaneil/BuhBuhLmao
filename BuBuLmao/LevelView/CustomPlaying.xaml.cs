@@ -31,7 +31,7 @@ namespace BuBuLmao.LevelView
         //Playing theme
         public static MediaPlayer playTheme = new MediaPlayer();
 
-        Puzzle puzzle = new Puzzle();
+        CustomPuzzle puzzle = new CustomPuzzle();
         ObservableCollection<PicturePiece> itemPlacement = new ObservableCollection<PicturePiece>();
         PicturePiece emptyItem = new PicturePiece();
 
@@ -52,8 +52,11 @@ namespace BuBuLmao.LevelView
             playTheme.Volume = 1;
             playTheme.Play();
 
+            //Get the image from the prevous window
+            BitmapImage NewNeverGoal = new BitmapImage(CreateLevel.ImgUri);
+
             //chosen level
-            puzzle.Initialize(4);
+            puzzle.Initialize(1, CreateLevel.level, NewNeverGoal);
 
             
             emptyItem.index = -1;
@@ -68,7 +71,7 @@ namespace BuBuLmao.LevelView
             }
             //cho vao listbox xaml
 
-            itemsList.ItemsSource = puzzle.PicPiece;
+            itemsList.ItemsSource = puzzle.PicPieces;
 
             puzzle.Edited += new EventHandler(puzzle_Edited);
 

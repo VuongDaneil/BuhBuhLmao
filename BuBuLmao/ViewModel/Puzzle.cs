@@ -19,7 +19,7 @@ namespace BuBuLmao.ViewModel
     class Puzzle
     {
 
-        public ObservableCollection<PicturePiece> PicPiece = new ObservableCollection<PicturePiece>();
+        public ObservableCollection<PicturePiece> PicPieces = new ObservableCollection<PicturePiece>();
 
         public string name;
 
@@ -52,13 +52,13 @@ namespace BuBuLmao.ViewModel
 
                 for (int i = 0; i < 9; i++)
                 {
-                    this.PicPiece.Add(new PicturePiece());
+                    this.PicPieces.Add(new PicturePiece());
 
-                    this.PicPiece[i].index = i;
+                    this.PicPieces[i].index = i;
 
-                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+                    this.PicPieces[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
 
-                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                    this.PicPieces[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPieces[i].UriString, UriKind.Relative));
                 }
             }
 
@@ -73,13 +73,13 @@ namespace BuBuLmao.ViewModel
 
                 for (int i = 0; i < 16; i++)
                 {
-                    this.PicPiece.Add(new PicturePiece());
+                    this.PicPieces.Add(new PicturePiece());
 
-                    this.PicPiece[i].index = i;
+                    this.PicPieces[i].index = i;
 
-                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+                    this.PicPieces[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
 
-                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                    this.PicPieces[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPieces[i].UriString, UriKind.Relative));
                 }
             }
 
@@ -94,13 +94,13 @@ namespace BuBuLmao.ViewModel
 
                 for (int i = 0; i < 25; i++)
                 {
-                    this.PicPiece.Add(new PicturePiece());
+                    this.PicPieces.Add(new PicturePiece());
 
-                    this.PicPiece[i].index = i;
+                    this.PicPieces[i].index = i;
 
-                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+                    this.PicPieces[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
 
-                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                    this.PicPieces[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPieces[i].UriString, UriKind.Relative));
                 }
             }
 
@@ -116,13 +116,13 @@ namespace BuBuLmao.ViewModel
 
                 for (int i = 0; i < 9; i++)
                 {
-                    this.PicPiece.Add(new PicturePiece());
+                    this.PicPieces.Add(new PicturePiece());
 
-                    this.PicPiece[i].index = i;
+                    this.PicPieces[i].index = i;
 
-                    this.PicPiece[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
+                    this.PicPieces[i].UriString = "Puzzle/" + directorySource + "/" + (i + 1).ToString() + ".png";
 
-                    this.PicPiece[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPiece[i].UriString, UriKind.Relative));
+                    this.PicPieces[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPieces[i].UriString, UriKind.Relative));
                 }
             }
 
@@ -135,11 +135,11 @@ namespace BuBuLmao.ViewModel
 
                 PicturePiece buffer;
 
-                buffer = this.PicPiece[i];
+                buffer = this.PicPieces[i];
 
-                this.PicPiece[i] = this.PicPiece[random];
+                this.PicPieces[i] = this.PicPieces[random];
 
-                this.PicPiece[random] = buffer;
+                this.PicPieces[random] = buffer;
             }
         }
 
