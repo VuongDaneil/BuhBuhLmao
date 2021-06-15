@@ -37,6 +37,8 @@ namespace BuBuLmao.LevelView
             string filepath = "";
             InitializeComponent();
 
+            GoalIMG.Source = new BitmapImage(new Uri("..\\Puzzle\\" + filepath + "\\Goal.png", UriKind.Relative));
+
             //Nhac background
             MainWindow.backgroundMusic.Pause();
             Woweffect.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\Wow.mp3", UriKind.Relative));
@@ -44,32 +46,45 @@ namespace BuBuLmao.LevelView
             Woweffect.Play();
 
 
-            //Hien anh thanh qua
-            if (DifficultiesWindow.id == 1)
+            //Hien anh thanh qua (Goal.png)
+            //Level co san
+            if (DifficultiesWindow.id == 1) //Easy
             {
                 score = PlayingWindow.score;
-                ScoreBoard.Text = PlayingWindow.score.ToString() + " Pts";
+                ScoreBoard.Text = PlayingWindow.score.ToString() + " pts!!!";
                 filepath = "Style";
+
+                GoalIMG.Source = new BitmapImage(new Uri("..\\Puzzle\\" + filepath + "\\Goal.png", UriKind.Relative));
             }
 
-            if (DifficultiesWindow.id == 2)
+            if (DifficultiesWindow.id == 2) //Advance
             {
                 score = AdvancePlaying.score;
                 filepath = "KristenStewart";
                 ScoreBoard.Text = AdvancePlaying.score.ToString() + " Pts";
+
+                GoalIMG.Source = new BitmapImage(new Uri("..\\Puzzle\\" + filepath + "\\Goal.png", UriKind.Relative));
             }
 
-            if (DifficultiesWindow.id == 3)
+            if (DifficultiesWindow.id == 3) //Expert
             {
                 score = ExpertPlaying.score;
                 filepath = "WildestDream";
                 ScoreBoard.Text = ExpertPlaying.score.ToString() + " Pts";
+
+                GoalIMG.Source = new BitmapImage(new Uri("..\\Puzzle\\" + filepath + "\\Goal.png", UriKind.Relative));
             }
 
-            GoalIMG.Source = new BitmapImage(new Uri("..\\Puzzle\\" + filepath + "\\Goal.png", UriKind.Relative));
 
-
-
+            //Custom level
+            else if (DifficultiesWindow.id != 1 && DifficultiesWindow.id != 2 && DifficultiesWindow.id != 3)
+            {
+                if (CustomPuzzle.id == 1) //Custom (Create level)
+                {
+                    filepath = CreateLevel.level;
+                    GoalIMG.Source = new BitmapImage(CreateLevel.ImgUri);
+                }
+            }
         }
 
 
@@ -90,6 +105,7 @@ namespace BuBuLmao.LevelView
             bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
             bonk.Volume = 1;
             bonk.Play();
+
 
             SaveScore SavingData = new SaveScore();
             SavingData.Show();

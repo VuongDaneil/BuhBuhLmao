@@ -260,7 +260,9 @@ namespace BuBuLmao.LevelView
             if (validate)
             {
                 Eyes.Opacity = 1;
-                MessageBox.Show("YOU WIN BRUHHH! HAHAHA GOOD JOB BRUH!");
+
+                CongratulationsWindow WIN = new CongratulationsWindow();
+                WIN.Show();
             }
         }
         #endregion
@@ -338,7 +340,7 @@ namespace BuBuLmao.LevelView
         }
         #endregion
 
-        #region Save game
+        #region Tuturial
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
