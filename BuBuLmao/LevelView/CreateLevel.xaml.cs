@@ -100,5 +100,15 @@ namespace BuBuLmao.LevelView
             CustomPlaying customLevel = new CustomPlaying();
             customLevel.Show();
         }
+
+        //Help button
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Step 1: click LOAD button\r\n" +
+                "Step 2: Choose your image\r\n" +
+                "Step 3: Enter your level's name\r\n" +
+                "Step 3: Click CREATE button\r\n" +
+                "Step 4: Click PLAY button and enjoy!\r\n");
+        }
     }
 }
