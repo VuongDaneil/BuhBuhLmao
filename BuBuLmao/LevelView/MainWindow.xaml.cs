@@ -33,7 +33,7 @@ namespace BuBuLmao.LevelView
             InitializeComponent();
 
             backgroundMusic.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\theme.mp3", UriKind.Relative)); 
-            backgroundMusic.Volume = 0.7;
+            backgroundMusic.Volume = 0.55;
             backgroundMusic.Play();
             backgroundMusic.MediaEnded += new EventHandler(Media_Ended);
 
