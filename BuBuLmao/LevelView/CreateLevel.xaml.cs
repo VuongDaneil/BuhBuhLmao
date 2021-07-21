@@ -27,7 +27,7 @@ namespace BuBuLmao.LevelView
     public partial class CreateLevel : Window
     {
 
-        //bonk
+        //bonk effect
         public static MediaPlayer bonk = new MediaPlayer();
 
         //Tao ten lv va ten folder
@@ -36,23 +36,22 @@ namespace BuBuLmao.LevelView
         public static BitmapImage NewGoal = new BitmapImage();
 
         public static Uri ImgUri;
+
         public CreateLevel()
         {
             InitializeComponent();
             level = lvlname.Text;
-            
-
         }
 
 
-
+        #region xu ly anh
+        //Mo 1 anh, nhap ten cho man choi (level)
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
             bonk.Volume = 1;
             bonk.Play();
 
-            //Open file (dinh dang anh)
             OpenFileDialog op = new OpenFileDialog();
             op.Title = "Select a picture";
             op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
@@ -61,15 +60,9 @@ namespace BuBuLmao.LevelView
             op.ShowDialog();
             newimg.Source = new BitmapImage(new Uri(op.FileName));
 
-            NewGoal = new BitmapImage(new Uri(op.FileName));
-            NewGoal.BeginInit();
-            NewGoal.DecodePixelWidth = 300;
-            NewGoal.DecodePixelHeight = 300;
-            NewGoal.EndInit();
-
-
             ImgUri = new Uri(op.FileName);
         }
+
 
         //Cut image (tao level + folder)
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -93,6 +86,10 @@ namespace BuBuLmao.LevelView
             }
         }
 
+        #endregion
+
+
+        //Bat dau choi (Custom game khong tinh diem, khong xep hang)
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             bonk.Open(new Uri(@"D:\BuhBuhLmao\BuBuLmao\Asset\Audio\bonk.mp3", UriKind.Relative));
@@ -102,6 +99,16 @@ namespace BuBuLmao.LevelView
 
             CustomPlaying customLevel = new CustomPlaying();
             customLevel.Show();
+        }
+
+        //Help button
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Step 1: click LOAD button\r\n" +
+                "Step 2: Choose your image\r\n" +
+                "Step 3: Enter your level's name\r\n" +
+                "Step 3: Click CREATE button\r\n" +
+                "Step 4: Click PLAY button and enjoy!\r\n");
         }
     }
 }

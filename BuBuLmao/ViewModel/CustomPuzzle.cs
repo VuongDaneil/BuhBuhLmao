@@ -23,6 +23,9 @@ namespace BuBuLmao.ViewModel
 
         public EventHandler Edited;
 
+        //id che do choi
+        public static int id ;
+
         public CustomPuzzle()
         {
 
@@ -38,13 +41,15 @@ namespace BuBuLmao.ViewModel
         {
             int numberOfpiece = 9;
 
+            #region Cut image method and put it in itemplacement
             if (chosen == 1)
             {
-                #region Cut image method
+                id = 1;
 
-                //Cac buoc xu ly: beginer mode
-                //Take one image from Iamge control (xaml) then split it into 9 part (PicturePiece)
-                //Create folder to contain the level, store pictures in that
+
+                //Cac buoc xu ly: beginer mode (Cat anh lam 9 phan + luu lai anh goc)
+                //Take one image from Iamge control (xaml) then split it into 9 part (PicturePiece) (trong random)
+                //Create folder to contain the level, store pictures in that folder
 
                 //-------------------------
 
@@ -62,23 +67,22 @@ namespace BuBuLmao.ViewModel
 
 
                 // Create a Bitmap object from newImgImage to make it square and 300*300
-
                 BitmapImage myBitmap = new BitmapImage();
-                /*
+
                 myBitmap.BeginInit();
                 myBitmap.UriSource = newimgForLevel.UriSource;
                 myBitmap.DecodePixelWidth = 300;
                 myBitmap.DecodePixelHeight = 300;
-                myBitmap.EndInit(); */
+                myBitmap.EndInit();
 
                 BitmapEncoder encoder = new PngBitmapEncoder();
-                encoder.Frames.Add(BitmapFrame.Create(newimgForLevel));
+                encoder.Frames.Add(BitmapFrame.Create(myBitmap));
 
                 using (var fileStream = new System.IO.FileStream(NewFolderPath + "\\Goal.png", System.IO.FileMode.Create))
                 {
                     encoder.Save(fileStream);
                 }
-                
+
                 //Get the picture
                 //Split into 9 pieces -> put in itemplacement;
 
@@ -90,7 +94,7 @@ namespace BuBuLmao.ViewModel
                 {
                     for (int j = 0; j < 3; j++) //y
                     {
-                        CroppedBitmap cp1 = new CroppedBitmap(newimgForLevel, new Int32Rect(j * 100, i * 100, 100, 100));
+                        CroppedBitmap cp1 = new CroppedBitmap(myBitmap, new Int32Rect(j * 100, i * 100, 100, 100));
                         BitmapEncoder newCroped = new PngBitmapEncoder();
                         newCroped.Frames.Add(BitmapFrame.Create(cp1));
 
@@ -113,7 +117,33 @@ namespace BuBuLmao.ViewModel
                     }
                 }
             }
-            //tron random
+            #endregion
+
+            #region play old level (co san trong folder Puzzle)
+            else if (chosen == 2)
+            {
+                id = 2;
+                numberOfpiece = 9;
+
+                String directorySource = CreateLevel.level;
+
+
+                for (int i = 0; i < 9; i++)
+                {
+                    this.PicPieces.Add(new PicturePiece());
+
+                    this.PicPieces[i].index = i;
+
+                    this.PicPieces[i].UriString = "../Puzzle/mm/" + i.ToString() + ".png";
+
+                    this.PicPieces[i].PuzzleImageSource = new BitmapImage(new Uri(this.PicPieces[i].UriString, UriKind.Relative));
+                }
+
+            }
+            #endregion
+
+            #region random pieces
+            //tron random cac manh
             Random rand = new Random();
 
             for (int i = 0; i < numberOfpiece; i++)
@@ -128,7 +158,10 @@ namespace BuBuLmao.ViewModel
 
                 this.PicPieces[random] = buffer;
             }
+            #endregion
         }
+
+
         //check 
         public bool Validate(ObservableCollection<PicturePiece> itemPlacement)
         {
@@ -144,5 +177,5 @@ namespace BuBuLmao.ViewModel
             return true;
         }
     }
-    #endregion
+    
 }
