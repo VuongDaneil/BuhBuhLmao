@@ -99,9 +99,6 @@ namespace BuBuLmao.LevelView
 
         #region thao tac chon & keo 
         //Keo tu listbox vao khung canvas
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //
         private void itemList_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             ListBox parent = sender as ListBox;
@@ -118,8 +115,6 @@ namespace BuBuLmao.LevelView
         }
 
         //keo 1 manh hinh anh trong canvas
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void PzItmCvs_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Canvas parent = sender as Canvas;
